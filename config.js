@@ -7,7 +7,6 @@ var config = {
   logFormat: 'combined',
   rpc: {
     parity: process.env.RPC_URL_PARITY || 'http://parity-rpc:8545',
-    pantheon: process.env.RPC_URL_PANTHEON || 'http://pantheon-rpc:8545'
   },
   get rpcPath () {
     return this.rpc.parity

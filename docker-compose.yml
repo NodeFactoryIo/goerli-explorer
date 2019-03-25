@@ -25,16 +25,10 @@ services:
     volumes:
       - parity-chain-data:/home/parity/.local/share/io.parity.ethereum
 
-  pantheon-rpc:
-    image: pegasyseng/pantheon:latest
-    command: --network=goerli  --rpc-http-enabled --host-whitelist=*
-    volumes:
-      - pantheon-chain-data:/var/lib/pantheon
-
   redis:
     image: redis:5-alpine
 
 volumes:
   explorer-node-modules:
   parity-chain-data:
-  pantheon-chain-data:
+  redis-data:
